@@ -6,18 +6,18 @@ Este projeto visa identificar transações financeiras fraudulentas usando um co
 
 O projeto segue o seguinte pipeline:
 
-1. [Definição do Problema]
-2. [Coleta dos Dados]
-3. [Limpeza e Tratamento dos Dados]
-4. [Análise Exploratória]
-5. [Modelagem dos Dados]
+1. Definição do Problema
+2. Coleta dos Dados
+3. Limpeza e Tratamento dos Dados
+4. Análise Exploratória
+5. Modelagem dos Dados
 6. Aplicação dos Modelos de ML
-7. [Interpretação dos Dados]
-8. [Aplicando Melhorias]
+7. Interpretação dos Dados
+8. Aplicando Melhorias
 
 ## Definição do Problema
 
-O objetivo deste projeto é detectar transações fraudulentas dentro de um conjunto de dados financeiros. A fraude financeira é um problema crítico que pode causar grandes perdas financeiras. Nosso objetivo é construir um modelo de machine learning que possa identificar essas fraudes com alta precisão.
+O objetivo deste projeto é detectar transações fraudulentas dentro de um conjunto de dados financeiros. A fraude financeira é um problema crítico que pode causar grandes perdas financeiras. Este projeto busca construir um modelo de machine learning que possa identificar essas fraudes com alta precisão.
 
 ## Coleta dos Dados
 
@@ -27,10 +27,10 @@ Utilizamos dados simulados do PaySim, um simulador de dados financeiros, dispon�
 
 ### Passos:
 
-1. **Seleção de Colunas:** Escolha as colunas relevantes para o problema.
-2. **Renomear Colunas:** Renomeie as colunas para facilitar o entendimento e a manipulação.
-3. **Verificação de Valores Nulos:** Identifique e trate valores nulos presentes nos dados.
-4. **Codificação de Variáveis Categóricas:** Use técnicas como One-Hot Encoding para transformar variáveis categóricas.
+1. **Seleção de Colunas:** Escolher as colunas relevantes para o problema.
+2. **Renomear Colunas:** Renomear as colunas para facilitar o entendimento e a manipulação.
+3. **Verificação de Valores Nulos:** Identificar e tratar valores nulos presentes nos dados.
+4. **Codificação de Variáveis Categóricas:** Utilizar técnicas como One-Hot Encoding para transformar variáveis categóricas.
 
 ```
 import pandas as pd
@@ -60,8 +60,8 @@ df = df.rename(columns=colunas)
 
 ## Análise Exploratória
 ### Passos:
-1. Estatísticas Descritivas: Obtenha uma visão geral dos dados com descrições estatísticas.
-2. Visualizações: Crie gráficos para entender a distribuição dos dados e identificar possíveis padrões.
+1. Estatísticas Descritivas: Obtém-se uma visão geral dos dados por meio de descrições estatísticas, que incluem medidas de tendência central, como média e mediana, bem como medidas de dispersão, como desvio padrão e intervalos interquartílicos. A análise inicial pode também envolver a verificação de valores mínimos e máximos, que ajudam a entender os limites dos conjuntos de dados. Esta etapa é crucial para identificar possíveis erros de inserção de dados, valores ausentes e a necessidade de normalização ou transformação dos dados antes de análises mais profundas.
+2. Visualizações: Cria-se gráficos para entender a distribuição dos dados e identificar possíveis padrões.
 ```
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -73,9 +73,9 @@ plt.show()
 ```
 ## Modelagem dos Dados e Aplicação dos Modelos de Machine Learning
 ### Passos:
-1. Divisão dos Dados: Separe os dados em conjuntos de treino e teste.
-2. Treinamento do Modelo: Treine um modelo de machine learning, como RandomForest.
-3. Avaliação do Modelo: Avalie o desempenho do modelo usando métricas apropriadas.
+1. Divisão dos Dados: Separar os dados em conjuntos de treino e teste.
+2. Treinamento do Modelo: Treinar um modelo de machine learning, como RandomForest.
+3. Avaliação do Modelo: Avaliar o desempenho do modelo usando métricas apropriadas.
 
 ```
 from sklearn.model_selection import train_test_split
@@ -98,13 +98,13 @@ print(confusion_matrix(y_test, y_pred))
 ```
 
 ## Interpretação dos Dados
-Interprete os resultados do modelo, focando nas principais métricas de avaliação como precisão, recall e f1-score. Analise a matriz de confusão para entender os acertos e erros do modelo.
+Os resultados do modelo devem ser interpretados com foco nas principais métricas de avaliação, como precisão, recall e f1-score. A análise da matriz de confusão é essencial para compreender os acertos e erros do modelo.
 
 ## Aplicando Melhorias
 ### Passos:
-1. Tuning de Hiperparâmetros: Use técnicas como GridSearchCV para encontrar os melhores parâmetros para o modelo.
-2. Testar Diferentes Modelos: Avalie outros algoritmos de machine learning para comparar o desempenho.
-3. Feature Engineering: Crie novas features ou selecione as mais importantes para melhorar a performance do modelo.
+1. Tuning de Hiperparâmetros: Técnicas como GridSearchCV devem ser utilizadas para encontrar os melhores parâmetros para o modelo.
+2. Testar Diferentes Modelos: Outros algoritmos de machine learning devem ser avaliados para comparar o desempenho.
+3. Feature Engineering: A criação de novas features ou a seleção das mais importantes pode melhorar a performance do modelo
 ```
 from sklearn.model_selection import GridSearchCV
 
